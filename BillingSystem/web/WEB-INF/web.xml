@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc:postgresql://localhost:5432/billing</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUserName</param-name>
+        <param-value>java</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>password</param-value>
+    </context-param>
     <listener>
         <description>ServletContextListener</description>
-        <listener-class>com.java.Listener</listener-class>
+        <listener-class>dbconn.DBConnListener</listener-class>
     </listener>
     <servlet>
-        <servlet-name>Addcustomer</servlet-name>
-        <servlet-class>com.java.Addcustomer</servlet-class>
+        <servlet-name>Services</servlet-name>
+        <servlet-class>profile.Services</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Customersearch</servlet-name>
-        <servlet-class>com.java.Customersearch</servlet-class>
+        <servlet-name>Profiles</servlet-name>
+        <servlet-class>profile.Profiles</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Addcustomer</servlet-name>
-        <url-pattern>/Addcustomer</url-pattern>
+        <servlet-name>Services</servlet-name>
+        <url-pattern>/Services</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Customersearch</servlet-name>
-        <url-pattern>/Customersearch</url-pattern>
+        <servlet-name>Profiles</servlet-name>
+        <url-pattern>/Profiles</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

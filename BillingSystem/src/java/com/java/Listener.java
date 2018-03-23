@@ -27,7 +27,7 @@ public class Listener implements ServletContextListener,HttpSessionListener  {
    
         try {
             DriverManager.registerDriver(new org.postgresql.Driver());
-            Connection conn= DriverManager.getConnection("jdbc:postgresql://localhost:5432/billing", "postgres", "root");
+            Connection conn= DriverManager.getConnection("jdbc:postgresql://localhost:5432/billing", "java", "password");
             sce.getServletContext().setAttribute("conn", conn);
         } catch (SQLException ex) {
             Logger.getLogger(Listener.class.getName()).log(Level.SEVERE, null, ex);

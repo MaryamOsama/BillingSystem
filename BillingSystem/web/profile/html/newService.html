@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Services</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    </head>
+
+    <body>
+        <div>
+            <form method="post" action="../../Services">
+                <table align="center">
+                    <tr><td>Package Name</td></tr>
+                    <tr><td>
+                            <input type="text" name="package_name" required>   
+                        </td>
+                    </tr>
+                    <tr><td>Service Name</td></tr>
+                    <tr><td>
+                            <input type="text" name="service_name" required>   
+                        </td>
+                    </tr>
+                    <tr><td>Service Price</td></tr>
+                    <tr><td>
+                            <input type="text" name="service_price"required>   
+                        </td>
+                    </tr>
+                    <tr><td>Time Zone</td></tr>
+                    <tr><td>
+                            <input type="text" name="time_zone" required>   
+                        </td>
+                    </tr>
+                    <tr><td>Tariff Zone</td></tr>
+                    <tr><td>
+                            <input type="text" name="tariff_zone" required>   
+                        </td>
+                    </tr>
+                    <tr><td>Payment</td></tr>
+                    <tr><td>
+                            <input type="radio" name="r_or_one" value="recurrency">Recurrency<br> 
+                            <input type="radio" name="r_or_one" value="one_time_fee">One Time Fee<br>   
+
+                        </td>
+                    </tr>
+                    <tr><td>Free Units</td></tr>
+                    <tr><td>
+                            <input type="text" name="fu" required>  
+                        </td>
+                    </tr>
+                    <tr><td>FU Description</td></tr>
+                    <tr><td>
+                            <input type="text" name="fu_description" required>   
+                        </td>
+                    </tr>
+                    <tr><td>
+                            <input type="submit" value="submit"/>
+                        </td></tr>
+                </table>
+            </form>    
+        </div>
+    </body>
+</html>

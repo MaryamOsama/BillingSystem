@@ -62,7 +62,7 @@ public class Addcustomer extends HttpServlet {
             }
             if (!found) {
 
-                String query = "insert into customers(msisdn,birthdate,address,job,billcycle,profile_id,fname,lname) values ('" + MSISDN + "','" + date + "','" + address + "','" + job + "','" + Bill_time + "','" + profile + "', '" + fname + "','" + lname + "')";
+                String query = "insert into customers(msisdn,fname,lname,birthdate,address,job,billcycle,profile_id) values ('" + MSISDN + "', '" + fname + "','" + lname + "','" + date + "','" + address + "','" + job + "','" + Bill_time + "','" + profile + "')";
                 stmt = con.createStatement(); 
                 int i = stmt.executeUpdate(query);
                 out.println(stmt);
